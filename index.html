@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorienrechner</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+        input, select, button { display: block; margin: 10px 0; padding: 10px; width: 100%; }
+    </style>
+</head>
+<body>
+
+    <h2>Kalorienrechner nach Mifflin-St Jeor</h2>
+
+    <label for="age">Alter:</label>
+    <input type="number" id="age" placeholder="Dein Alter">
+
+    <label for="gender">Geschlecht:</label>
+    <select id="gender">
+        <option value="male">Männlich</option>
+        <option value="female">Weiblich</option>
+    </select>
+
+    <label for="weight">Gewicht (kg):</label>
+    <input type="number" id="weight" placeholder="Dein Gewicht in kg">
+
+    <label for="height">Größe (cm):</label>
+    <input type="number" id="height" placeholder="Deine Größe in cm">
+
+    <label for="activity">Aktivitätslevel:</label>
+    <button onclick="askGPT()">GPT basierte Analyse starten</button>
+    <p id="activityResult"></p>
+
+    <button onclick="calculateCalories()">Kalorienbedarf berechnen</button>
+
+    <h3>Ergebnis:</h3>
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
